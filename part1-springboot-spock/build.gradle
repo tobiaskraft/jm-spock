@@ -1,0 +1,37 @@
+buildscript {
+  repositories {
+    maven { url "http://repo.spring.io/libs-snapshot" }
+    mavenLocal()
+  }
+  dependencies {
+    classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.6.RELEASE")
+  }
+}
+
+apply plugin: 'groovy'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+jar {
+  baseName = 'springboot'
+  version = '0.1.0'
+}
+
+repositories {
+  mavenCentral()
+  maven { url "http://repo.spring.io/libs-snapshot" }
+}
+
+dependencies {
+  compile "org.apache.commons:commons-lang3:3.3.2"
+  compile("org.springframework.boot:spring-boot-starter-web")
+  testCompile "org.spockframework:spock-spring:0.7-groovy-2.0"
+  testCompile "org.springframework:spring-test"
+  testRuntime "cglib:cglib-nodep:3.1" // allows mocking of classes (in addition to interfaces)
+  testCompile "org.codehaus.groovy:groovy-all:2.3.6"
+  testCompile "org.spockframework:spock-core:0.7-groovy-2.0"
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '2.1'
+}
