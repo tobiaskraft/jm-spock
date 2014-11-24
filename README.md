@@ -21,8 +21,7 @@ Ausführung aller Tests
 
 Test reports öffnen build/reports/tests/index.html
 
-Nutzung von IntelliJ
-# Erzeugen der Metadateien für IntelliJ
+Bei der Nutzung von IntelliJ können die Metadateien mit folgendem Kommando erzeugt werden:
 ./gradlew idea
 
 
