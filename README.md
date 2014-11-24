@@ -1,7 +1,7 @@
 
 
-Teil 1: Mit Mr. Spock beim Testeinsatz (Ausgabe Januar 2015)
-===========================================================
+Teil 1: Mit Mr. Spock beim Testeinsatz (Ausgabe Dezember 2014)
+==============================================================
 
 Beispielapplikation für den im Java-Magazin veröffentlichten Artikel "Mit Mr. Spock beim Testeinsatz". 
 
@@ -26,5 +26,19 @@ Nutzung von IntelliJ
 ./gradlew idea
 
 
-Teil 2: TODO
-============
+Teil 2: Mr. Spock ruft Geb (Ausgabe Januar 2015)
+===========================================================
+
+Funktionale Testfälle auf der Basis von Spock und Geb für den im Java-Magazin veröffentlichten Artikel "Mr. Spock ruft Geb".
+
+Die Testfälle verwenden die Homepage des Java-Magazin (http://javamagazin.de) als Testseite. 
+
+Gradle
+Mit Hilfe des Gradle-Wrappers werden ggfs. noch nicht vorhanden Bibliotheken/Abhängigkeiten nachgeladen 
+
+Überblick über die verschiedenen Tasks
+./gradlew tasks
+
+Ausführung aller Tests mit den Browsern Chrome, Firefox und PhatomJS
+./gradlew test
+
